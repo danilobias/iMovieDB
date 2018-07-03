@@ -18,6 +18,8 @@
 		9F3417B920EBE35100DEDA3B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417B420EBE35100DEDA3B /* Enum.swift */; };
 		9F3417BA20EBE35100DEDA3B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417B620EBE35100DEDA3B /* Protocols.swift */; };
 		9FD5547120EBE5F3005BD099 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5547020EBE5F3005BD099 /* BaseRequest.swift */; };
+		9FD5547620EBEAA8005BD099 /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5547420EBEAA8005BD099 /* GenreResponse.swift */; };
+		9FD5547720EBEAA8005BD099 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5547520EBEAA8005BD099 /* Genres.swift */; };
 		FA2FC8A460638223BD59C35E /* Pods_iMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		9F3417B420EBE35100DEDA3B /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		9F3417B620EBE35100DEDA3B /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9FD5547020EBE5F3005BD099 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		9FD5547420EBEAA8005BD099 /* GenreResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
+		9FD5547520EBEAA8005BD099 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		DAD7FED3124633AD6435074A /* Pods-iMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovieDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA5106D13B1528AF6FF143A /* Pods-iMovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +77,7 @@
 		9F34179820EBBAD600DEDA3B /* iMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				9FD5547220EBEA54005BD099 /* Model */,
 				9FD5546E20EBE5D2005BD099 /* Requests */,
 				9F3417AE20EBE35100DEDA3B /* Utils */,
 				9F34179920EBBAD600DEDA3B /* AppDelegate.swift */,
@@ -145,6 +150,23 @@
 			path = BaseRequest;
 			sourceTree = "<group>";
 		};
+		9FD5547220EBEA54005BD099 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5547320EBEA59005BD099 /* Genre */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FD5547320EBEA59005BD099 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5547520EBEAA8005BD099 /* Genres.swift */,
+				9FD5547420EBEAA8005BD099 /* GenreResponse.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
 		F85BDA0DF72D83046AD64AE3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +195,7 @@
 				9F34179220EBBAD600DEDA3B /* Sources */,
 				9F34179320EBBAD600DEDA3B /* Frameworks */,
 				9F34179420EBBAD600DEDA3B /* Resources */,
+				C889A6B308D588773FADCB00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +271,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C889A6B308D588773FADCB00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD5547120EBE5F3005BD099 /* BaseRequest.swift in Sources */,
+				9FD5547720EBEAA8005BD099 /* Genres.swift in Sources */,
 				9F34179C20EBBAD600DEDA3B /* ViewController.swift in Sources */,
 				9F34179A20EBBAD600DEDA3B /* AppDelegate.swift in Sources */,
 				9F3417BA20EBE35100DEDA3B /* Protocols.swift in Sources */,
@@ -263,6 +307,7 @@
 				9F3417B820EBE35100DEDA3B /* GlobalConstants.swift in Sources */,
 				9F3417B720EBE35100DEDA3B /* ErrorManager.swift in Sources */,
 				9F3417A220EBBAD600DEDA3B /* iMovieDB.xcdatamodeld in Sources */,
+				9FD5547620EBEAA8005BD099 /* GenreResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +456,7 @@
 				DEVELOPMENT_TEAM = CE2N9W8684;
 				INFOPLIST_FILE = iMovieDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.iMovieDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -431,10 +473,7 @@
 				DEVELOPMENT_TEAM = CE2N9W8684;
 				INFOPLIST_FILE = iMovieDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.iMovieDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
