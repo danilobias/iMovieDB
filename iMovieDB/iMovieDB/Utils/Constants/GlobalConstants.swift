@@ -12,7 +12,7 @@ struct Constants {
     
     //MARK: URL's e métodos
     struct APIPreffix {
-        static var urlPreffix: String = "https://swapi.co/api"
+        static var urlPreffix: String = "https://api.themoviedb.org/3/"
     }
     
     struct URLPaths {
