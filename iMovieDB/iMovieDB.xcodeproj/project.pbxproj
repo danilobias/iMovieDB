@@ -13,9 +13,11 @@
 		9F3417A220EBBAD600DEDA3B /* iMovieDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417A020EBBAD600DEDA3B /* iMovieDB.xcdatamodeld */; };
 		9F3417A420EBBAD800DEDA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3417A320EBBAD800DEDA3B /* Assets.xcassets */; };
 		9F3417A720EBBAD800DEDA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F3417A520EBBAD800DEDA3B /* LaunchScreen.storyboard */; };
+		FA2FC8A460638223BD59C35E /* Pods_iMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34179620EBBAD600DEDA3B /* iMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34179920EBBAD600DEDA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F34179B20EBBAD600DEDA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		9F3417A320EBBAD800DEDA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F3417A620EBBAD800DEDA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F3417A820EBBAD800DEDA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD7FED3124633AD6435074A /* Pods-iMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovieDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
+		FCA5106D13B1528AF6FF143A /* Pods-iMovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2FC8A460638223BD59C35E /* Pods_iMovieDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				9F34179820EBBAD600DEDA3B /* iMovieDB */,
 				9F34179720EBBAD600DEDA3B /* Products */,
+				F85BDA0DF72D83046AD64AE3 /* Pods */,
+				FF6A83947916E2D8F78DE1A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = iMovieDB;
 			sourceTree = "<group>";
 		};
+		F85BDA0DF72D83046AD64AE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAD7FED3124633AD6435074A /* Pods-iMovieDB.debug.xcconfig */,
+				FCA5106D13B1528AF6FF143A /* Pods-iMovieDB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF6A83947916E2D8F78DE1A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F3417AB20EBBAD800DEDA3B /* Build configuration list for PBXNativeTarget "iMovieDB" */;
 			buildPhases = (
+				91397AD177AD7D973EA96141 /* [CP] Check Pods Manifest.lock */,
 				9F34179220EBBAD600DEDA3B /* Sources */,
 				9F34179320EBBAD600DEDA3B /* Frameworks */,
 				9F34179420EBBAD600DEDA3B /* Resources */,
@@ -132,6 +157,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91397AD177AD7D973EA96141 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMovieDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F34179220EBBAD600DEDA3B /* Sources */ = {
@@ -282,14 +328,12 @@
 		};
 		9F3417AC20EBBAD800DEDA3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD7FED3124633AD6435074A /* Pods-iMovieDB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iMovieDB/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.iMovieDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -299,14 +343,12 @@
 		};
 		9F3417AD20EBBAD800DEDA3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA5106D13B1528AF6FF143A /* Pods-iMovieDB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iMovieDB/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.iMovieDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
