@@ -15,10 +15,26 @@ class GenresRequest: NSObject {
         BaseRequest.get(url) { (result) in
             if let data = result as? Data {
 
-                let json = JSON(data)
-                let genreResponse = GenreResponse(json: json)
+                let json: JSON = JSON(data)
+                let genreResponse: GenreResponse = GenreResponse(json: json)
                 completion(genreResponse, nil)
 
+            }else if let error = result as? Error {
+                completion(nil, error)
+            }else{
+                completion(nil, ErrorManager.error(type: .unknown))
+            }
+        }
+    }
+    
+    static func getMoviesByGenre(withURL url: String, completion: @escaping(MoviesByGenreResponse?, Error?) -> Void) {
+        BaseRequest.get(url) { (result) in
+            if let data = result as? Data {
+                
+                let json: JSON = JSON(data)
+                let moviesByGenreResponse: MoviesByGenreResponse = MoviesByGenreResponse(json: json)
+                completion(moviesByGenreResponse, nil)
+                
             }else if let error = result as? Error {
                 completion(nil, error)
             }else{
