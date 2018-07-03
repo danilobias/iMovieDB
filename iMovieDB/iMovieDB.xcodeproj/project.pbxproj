@@ -32,6 +32,7 @@
 		9FD5549420EBF5F0005BD099 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5548B20EBF5F0005BD099 /* Crew.swift */; };
 		9FD5549520EBF5F0005BD099 /* ProductionCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5548C20EBF5F0005BD099 /* ProductionCountries.swift */; };
 		9FD5549620EBF5F0005BD099 /* ProductionCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5548D20EBF5F0005BD099 /* ProductionCompanies.swift */; };
+		9FD5549C20EBFDF0005BD099 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5549B20EBFDF0005BD099 /* MovieDetailsViewModel.swift */; };
 		FA2FC8A460638223BD59C35E /* Pods_iMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9FD5548B20EBF5F0005BD099 /* Crew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		9FD5548C20EBF5F0005BD099 /* ProductionCountries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductionCountries.swift; sourceTree = "<group>"; };
 		9FD5548D20EBF5F0005BD099 /* ProductionCompanies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductionCompanies.swift; sourceTree = "<group>"; };
+		9FD5549B20EBFDF0005BD099 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		DAD7FED3124633AD6435074A /* Pods-iMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovieDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA5106D13B1528AF6FF143A /* Pods-iMovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMovieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMovieDB/Pods-iMovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,9 +103,10 @@
 		9F34179820EBBAD600DEDA3B /* iMovieDB */ = {
 			isa = PBXGroup;
 			children = (
-				9FD5547220EBEA54005BD099 /* Model */,
-				9FD5546E20EBE5D2005BD099 /* Requests */,
 				9F3417AE20EBE35100DEDA3B /* Utils */,
+				9FD5546E20EBE5D2005BD099 /* Requests */,
+				9FD5547220EBEA54005BD099 /* Model */,
+				9FD5549720EBFC4A005BD099 /* ViewModel */,
 				9F34179920EBBAD600DEDA3B /* AppDelegate.swift */,
 				9F34179B20EBBAD600DEDA3B /* ViewController.swift */,
 				9F34179D20EBBAD600DEDA3B /* Main.storyboard */,
@@ -233,6 +236,22 @@
 				9FD5548D20EBF5F0005BD099 /* ProductionCompanies.swift */,
 			);
 			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		9FD5549720EBFC4A005BD099 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5549820EBFC5E005BD099 /* MoviesViewModels */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9FD5549820EBFC5E005BD099 /* MoviesViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5549B20EBFDF0005BD099 /* MovieDetailsViewModel.swift */,
+			);
+			path = MoviesViewModels;
 			sourceTree = "<group>";
 		};
 		F85BDA0DF72D83046AD64AE3 /* Pods */ = {
@@ -372,6 +391,7 @@
 				9FD5549020EBF5F0005BD099 /* SpokenLanguages.swift in Sources */,
 				9FD5549120EBF5F0005BD099 /* MovieDetail.swift in Sources */,
 				9FD5549520EBF5F0005BD099 /* ProductionCountries.swift in Sources */,
+				9FD5549C20EBFDF0005BD099 /* MovieDetailsViewModel.swift in Sources */,
 				9FD5548320EBF5A9005BD099 /* MoviesRequest.swift in Sources */,
 				9F34179C20EBBAD600DEDA3B /* ViewController.swift in Sources */,
 				9F34179A20EBBAD600DEDA3B /* AppDelegate.swift in Sources */,

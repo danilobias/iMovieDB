@@ -23,9 +23,9 @@ struct Constants {
         static let commonPath = "/"
     }
     
-    struct FilmsMethods {
+    struct moviesMethods {
         static let getAllMethod = "/films"
-        static let getDetailsMethod = Constants.FilmsMethods.getAllMethod + Constants.URLPaths.commonPath
+        static let getDetailsMethod = Constants.moviesMethods.getAllMethod + Constants.URLPaths.commonPath
     }
     
     struct PeopleMethods {
@@ -56,8 +56,8 @@ struct Constants {
 
     struct APIUrls {
         
-        static let getAllFilmsUrl = Constants.APIPreffix.urlPreffix + FilmsMethods.getAllMethod
-        static let getFilmDetailsUrl = Constants.APIPreffix.urlPreffix + FilmsMethods.getDetailsMethod
+        static let getAllFilmsUrl = Constants.APIPreffix.urlPreffix + moviesMethods.getAllMethod
+        static let getFilmDetailsUrl = Constants.APIPreffix.urlPreffix + moviesMethods.getDetailsMethod
         
         static let getAllPeopleUrl = Constants.APIPreffix.urlPreffix + PeopleMethods.getAllMethod
         static let getPeopleDetailsUrl = Constants.APIPreffix.urlPreffix + PeopleMethods.getDetailsMethod
