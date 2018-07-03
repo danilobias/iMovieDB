@@ -1,8 +1,9 @@
 //
 //  Genres.swift
+//  iMovieDB
 //
 //  Created by Danilo Bias on 03/07/18
-//  Copyright (c) . All rights reserved.
+//  Copyright (c) Danilo Bias. All rights reserved.
 //
 
 import Foundation
