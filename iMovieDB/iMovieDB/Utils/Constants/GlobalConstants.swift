@@ -15,6 +15,10 @@ struct Constants {
         static var urlPreffix: String = "https://api.themoviedb.org/3/"
     }
     
+    struct APIKeys {
+        static var apiKey: String = "0926f45f96279de33082774d572573c0"
+    }
+    
     struct URLPaths {
         static let commonPath = "/"
     }
