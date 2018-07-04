@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesByGenreViewController: UIViewController {
+class MoviesByGenreViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
