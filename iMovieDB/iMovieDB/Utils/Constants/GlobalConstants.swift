@@ -50,8 +50,12 @@ struct Constants {
     }
 
     struct GenresMethods {
-        static let getAllMethod = "genre/movie/list?&sort_by=created_at.asc"
-        static let getDetailsMethod = Constants.GenresMethods.getAllMethod + Constants.URLPaths.commonPath
+        static let getAllMethod: String = "genre/movie/list?"
+        static let getMovieByGenreMethod: String = "genre/%@/movies?"
+    }
+    
+    struct SortMethods {
+        static let orderByCreatedAtAsc: String = "sort_by=created_at.asc"
     }
 
 
@@ -72,8 +76,9 @@ struct Constants {
 //        static let getAllSpeciesUrl = Constants.APIPreffix.urlPreffix + SpeciesMethods.getAllMethod
 //        static let getSpeciesDetailsUrl = Constants.APIPreffix.urlPreffix + SpeciesMethods.getDetailsMethod
 
-        static let getAllGenres = Constants.APIPreffix.urlPreffix + GenresMethods.getAllMethod + Constants.URLPaths.concatKey + Constants.APIKeys.apiKey
-        static let getPlanetDetailsUrl = Constants.APIPreffix.urlPreffix + GenresMethods.getDetailsMethod
+        static let getAllGenres = Constants.APIPreffix.urlPreffix + GenresMethods.getAllMethod + Constants.URLPaths.concatKey + Constants.SortMethods.orderByCreatedAtAsc + Constants.URLPaths.concatKey + Constants.APIKeys.apiKey
+        
+        static let getMovieByGenre = Constants.APIPreffix.urlPreffix + GenresMethods.getMovieByGenreMethod + Constants.SortMethods.orderByCreatedAtAsc + Constants.URLPaths.concatKey + Constants.APIKeys.apiKey
         
     }
 }

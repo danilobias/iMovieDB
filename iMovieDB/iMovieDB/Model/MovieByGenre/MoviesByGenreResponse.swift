@@ -23,7 +23,7 @@ public class MoviesByGenreResponse {
     public var totalPages: Int?
     public var page: Int?
     public var id: Int?
-    public var results: [MovieByGenre]?
+    public var movies: [MovieByGenre]?
     public var totalResults: Int?
     
     // MARK: SwiftyJSON Initializers
@@ -42,7 +42,7 @@ public class MoviesByGenreResponse {
         totalPages = json[SerializationKeys.totalPages].int
         page = json[SerializationKeys.page].int
         id = json[SerializationKeys.id].int
-        if let items = json[SerializationKeys.results].array { results = items.map { MovieByGenre(json: $0) } }
+        if let items = json[SerializationKeys.results].array { movies = items.map { MovieByGenre(json: $0) } }
         totalResults = json[SerializationKeys.totalResults].int
     }
     
@@ -54,7 +54,7 @@ public class MoviesByGenreResponse {
         if let value = totalPages { dictionary[SerializationKeys.totalPages] = value }
         if let value = page { dictionary[SerializationKeys.page] = value }
         if let value = id { dictionary[SerializationKeys.id] = value }
-        if let value = results { dictionary[SerializationKeys.results] = value.map { $0.dictionaryRepresentation() } }
+        if let value = movies { dictionary[SerializationKeys.results] = value.map { $0.dictionaryRepresentation() } }
         if let value = totalResults { dictionary[SerializationKeys.totalResults] = value }
         return dictionary
     }

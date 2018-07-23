@@ -14,10 +14,18 @@ class MoviesByGenreViewController: BaseViewController {
     @IBOutlet weak var  filmsCollectionView: UICollectionView!
     
     // MARK: - Lets and Vars
-    var genresViewModel: GenreViewModel? {
+    var genresViewModel: GenreViewModel! {
         didSet {
-            genresViewModel?.responseDidChange = { [weak self] viewModel in
-//                self?.filmsCollectionView.reloadData()
+            genresViewModel.responseDidChange = { [weak self] viewModel in
+                self?.getMoviesByGenre()
+            }
+        }
+    }
+    
+    var moviesByGenreViewModel: MoviesByGenreViewModel! {
+        didSet {
+            moviesByGenreViewModel.responseDidChange = { [weak self] viewModel in
+                self?.finishGetMovies()
             }
         }
     }
@@ -33,7 +41,7 @@ class MoviesByGenreViewController: BaseViewController {
     // MARK: - Requests
     func makeGenresRequest() {
         
-        self.genresViewModel?.getElement(completion: { (error) in
+        self.genresViewModel.getElement(completion: { (error) in
             // TO-DO: Tratar erro
         })
         
@@ -52,6 +60,23 @@ class MoviesByGenreViewController: BaseViewController {
 //        })
     }
 
+    func getMoviesByGenre() {
+        self.moviesByGenreViewModel = MoviesByGenreViewModel()
+        if let genresArray: [Genres] = self.genresViewModel.response?.genres {
+            for genre in genresArray {
+                self.moviesByGenreViewModel.genreID = "\(genre.id!)"
+                self.moviesByGenreViewModel.getElement { (error) in }
+            }
+        }
+    }
+    
+    func finishGetMovies() {
+        
+        if self.genresViewModel.numberOfRows() == self.moviesByGenreViewModel.moviesByGenre.count {
+            print("Finish")
+            self.filmsCollectionView.reloadData()
+        }
+    }
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -64,5 +89,19 @@ class MoviesByGenreViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension MoviesByGenreViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return self.genresViewModel.numberOfRows()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.moviesByGenreViewModel.moviesByGenre[section].movies?.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
 }
