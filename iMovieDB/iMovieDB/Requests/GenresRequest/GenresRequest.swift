@@ -14,7 +14,7 @@ class GenresRequest: NSObject {
     static func getAllGenres(withURL url: String, completion: @escaping(GenreResponse?, Error?) -> Void) {
         BaseRequest.get(url) { (result) in
             if let data = result as? Data {
-
+                print("ALL GENRES \(JSON(data))")
                 let json: JSON = JSON(data)
                 let genreResponse: GenreResponse = GenreResponse(json: json)
                 completion(genreResponse, nil)

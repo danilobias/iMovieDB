@@ -17,7 +17,7 @@ protocol Countable: class{
 }
 
 protocol RequestElement: class{
-    func getElement(firstPage: Bool, completion: @escaping(Error?) -> Void)
+    func getElement(completion: @escaping(Error?) -> Void)
 }
 
 protocol RequestElementURL: class{

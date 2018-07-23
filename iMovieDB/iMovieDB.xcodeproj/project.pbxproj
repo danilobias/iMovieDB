@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F34179A20EBBAD600DEDA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34179920EBBAD600DEDA3B /* AppDelegate.swift */; };
-		9F34179C20EBBAD600DEDA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34179B20EBBAD600DEDA3B /* ViewController.swift */; };
 		9F34179F20EBBAD600DEDA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F34179D20EBBAD600DEDA3B /* Main.storyboard */; };
 		9F3417A220EBBAD600DEDA3B /* iMovieDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417A020EBBAD600DEDA3B /* iMovieDB.xcdatamodeld */; };
 		9F3417A420EBBAD800DEDA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3417A320EBBAD800DEDA3B /* Assets.xcassets */; };
@@ -94,7 +93,6 @@
 		6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34179620EBBAD600DEDA3B /* iMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34179920EBBAD600DEDA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F34179B20EBBAD600DEDA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F34179E20EBBAD600DEDA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F3417A120EBBAD600DEDA3B /* iMovieDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMovieDB.xcdatamodel; sourceTree = "<group>"; };
 		9F3417A320EBBAD800DEDA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				9FD5549720EBFC4A005BD099 /* ViewModel */,
 				9F735F2520ECFA9800F16D30 /* Supporting Files */,
 				9F34179920EBBAD600DEDA3B /* AppDelegate.swift */,
-				9F34179B20EBBAD600DEDA3B /* ViewController.swift */,
 				9F34179D20EBBAD600DEDA3B /* Main.storyboard */,
 				9F3417A320EBBAD800DEDA3B /* Assets.xcassets */,
 				9F3417A520EBBAD800DEDA3B /* LaunchScreen.storyboard */,
@@ -671,7 +668,6 @@
 				9FD5549520EBF5F0005BD099 /* ProductionCountries.swift in Sources */,
 				9FD5549C20EBFDF0005BD099 /* MovieDetailsViewModel.swift in Sources */,
 				9FD5548320EBF5A9005BD099 /* MoviesRequest.swift in Sources */,
-				9F34179C20EBBAD600DEDA3B /* ViewController.swift in Sources */,
 				9F34179A20EBBAD600DEDA3B /* AppDelegate.swift in Sources */,
 				9F3417BA20EBE35100DEDA3B /* Protocols.swift in Sources */,
 				9FD5548F20EBF5F0005BD099 /* Credits.swift in Sources */,
