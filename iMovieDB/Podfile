@@ -6,8 +6,8 @@ target 'iMovieDB' do
   use_frameworks!
 
   # Pods for iMovieDB
-  pod 'Alamofire'
-  pod 'AlamofireImage'
+  pod 'Alamofire'  
+  pod 'Kingfisher'
   pod 'SwiftyJSON'
 
 end

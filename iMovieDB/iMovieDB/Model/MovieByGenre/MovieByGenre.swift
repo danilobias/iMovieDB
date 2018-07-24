@@ -44,6 +44,8 @@ public class MovieByGenre {
     public var title: String?
     public var adult: Bool? = false
     
+    public var posterFullUrl: String = ""
+    
     // MARK: SwiftyJSON Initializers
     /// Initiates the instance based on the object.
     ///
@@ -71,6 +73,10 @@ public class MovieByGenre {
         voteAverage = json[SerializationKeys.voteAverage].float
         title = json[SerializationKeys.title].string
         adult = json[SerializationKeys.adult].boolValue
+        
+        if let poster = posterPath {
+            posterFullUrl = Constants.APIPreffix.imageUrlPreffix + poster
+        }
     }
     
     /// Generates description of the object in the form of a NSDictionary.

@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="145" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MLD-Jc-dmH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MoviesByGenreTableViewCell" rowHeight="145" id="67j-gc-OJi" customClass="MovieByGenreTableViewCell" customModule="iMovieDB" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="145"/>
@@ -30,7 +30,7 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-gl-BEu">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L0J-5S-caU" customClass="FilmsFlowLayout" customModule="iMovieDB" customModuleProvider="target">
                                                         <size key="itemSize" width="109" height="135"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,9 +45,8 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="135"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBG-iO-Lo2">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_claquete_big" translatesAutoresizingMaskIntoConstraints="NO" id="zBG-iO-Lo2">
                                                                         <rect key="frame" x="0.0" y="0.0" width="109" height="135"/>
-                                                                        <color key="backgroundColor" red="0.0" green="0.82352941180000006" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </imageView>
                                                                 </subviews>
                                                             </view>
@@ -68,6 +67,7 @@
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="CgI-gl-BEu" firstAttribute="leading" secondItem="Dpn-Al-hWK" secondAttribute="leading" id="SDa-DO-5vo"/>
                                                 <constraint firstAttribute="trailing" secondItem="CgI-gl-BEu" secondAttribute="trailing" id="VXd-6H-gi8"/>
@@ -75,6 +75,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="CgI-gl-BEu" secondAttribute="bottom" id="dCK-sE-cME"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="filmsCollectionView" destination="CgI-gl-BEu" id="i54-vx-sTb"/>
                                         </connections>
@@ -86,7 +87,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MLD-Jc-dmH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HoA-S7-VLZ"/>
                             <constraint firstItem="MLD-Jc-dmH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IN9-op-nFc"/>
@@ -109,10 +110,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VhJ-Z7-WeC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="inj-lj-AhC">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="inj-lj-AhC">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="mL2-Xx-sjL" kind="relationship" relationship="viewControllers" id="Ia8-SZ-6Kl"/>
@@ -126,9 +129,9 @@
         <scene sceneID="aY2-Fj-A9L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mL2-Xx-sjL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="FlI-GV-OFa"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="ic_movie_start_small" id="FlI-GV-OFa"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ku-WW-RgI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="6Ku-WW-RgI">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -142,4 +145,8 @@
             <point key="canvasLocation" x="849" y="-1437"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_claquete_big" width="256" height="256"/>
+        <image name="ic_movie_start_small" width="32" height="32"/>
+    </resources>
 </document>

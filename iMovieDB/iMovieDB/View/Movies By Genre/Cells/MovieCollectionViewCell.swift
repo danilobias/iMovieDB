@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,15 @@ class MovieCollectionViewCell: UICollectionViewCell {
     // MARK: - Methods
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.filmImageView.image = nil
+        self.filmImageView.kf.cancelDownloadTask()
+        self.filmImageView.image = UIImage(named: "ic_claquete_large")!
+    }
+    
+    // MARK: - Layout configs
+    func loadImage(urlString: String) {
+        if let url = URL(string: urlString) {
+            let placeholderImage = UIImage(named: "ic_claquete_large")!
+            self.filmImageView.kf.setImage(with: url, placeholder: placeholderImage)
+        }
     }
 }

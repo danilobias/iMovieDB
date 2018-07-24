@@ -12,11 +12,12 @@ struct Constants {
     
     //MARK: URL's e métodos
     struct APIPreffix {
-        static var urlPreffix: String = "https://api.themoviedb.org/3/"
+        static let urlPreffix: String = "https://api.themoviedb.org/3/"
+        static let imageUrlPreffix: String = "https://image.tmdb.org/t/p/original/"
     }
     
     struct APIKeys {
-        static var apiKey: String = "api_key=0926f45f96279de33082774d572573c0"
+        static let apiKey: String = "api_key=0926f45f96279de33082774d572573c0"
     }
     
     struct URLPaths {

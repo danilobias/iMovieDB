@@ -108,7 +108,7 @@ extension MoviesByGenreViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieByGenreTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MoviesByGenreTableViewCell") as! MovieByGenreTableViewCell
-        let moviesByGenre: MoviesByGenreResponse = self.moviesByGenreViewModel.getMoviesBy(index: indexPath.row)
+        let moviesByGenre: MoviesByGenreResponse = self.moviesByGenreViewModel.getMoviesBy(index: indexPath.section)
         cell.configCellWith(movies: moviesByGenre)
         return cell
     }

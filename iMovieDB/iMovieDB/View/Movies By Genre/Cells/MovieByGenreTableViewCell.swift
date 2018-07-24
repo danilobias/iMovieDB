@@ -24,8 +24,12 @@ class MovieByGenreTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+    }
+    
+    // MARK: - Utils
+    func getMovieBy(index: Int) -> MovieByGenre {
+        return self.moviesByGenre!.movies![index]
     }
 
     // MARK: - Layout configs
@@ -46,6 +50,8 @@ extension MovieByGenreTableViewCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MovieCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+        let movie: MovieByGenre = self.getMovieBy(index: indexPath.row)
+        cell.loadImage(urlString: movie.posterFullUrl)
         return cell
     }
 }
