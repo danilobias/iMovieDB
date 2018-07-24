@@ -129,7 +129,7 @@
         <scene sceneID="aY2-Fj-A9L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mL2-Xx-sjL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="ic_movie_start_small" id="FlI-GV-OFa"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="ic_tab_home" id="FlI-GV-OFa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="6Ku-WW-RgI">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -147,6 +147,6 @@
     </scenes>
     <resources>
         <image name="ic_claquete_big" width="256" height="256"/>
-        <image name="ic_movie_start_small" width="32" height="32"/>
+        <image name="ic_tab_home" width="25" height="25"/>
     </resources>
 </document>

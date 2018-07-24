@@ -9,6 +9,7 @@ target 'iMovieDB' do
   pod 'Alamofire'  
   pod 'Kingfisher'
   pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
 
 end
 
