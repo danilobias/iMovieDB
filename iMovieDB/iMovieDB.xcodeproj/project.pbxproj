@@ -16,6 +16,9 @@
 		9F3417B820EBE35100DEDA3B /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417B220EBE35100DEDA3B /* GlobalConstants.swift */; };
 		9F3417B920EBE35100DEDA3B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417B420EBE35100DEDA3B /* Enum.swift */; };
 		9F3417BA20EBE35100DEDA3B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417B620EBE35100DEDA3B /* Protocols.swift */; };
+		9F677C9D21075ED5002DA21F /* MovieByGenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677C9C21075ED5002DA21F /* MovieByGenreTableViewCell.swift */; };
+		9F677C9F21076373002DA21F /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677C9E21076373002DA21F /* MovieCollectionViewCell.swift */; };
+		9F677CA3210764CF002DA21F /* FilmsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CA2210764CF002DA21F /* FilmsFlowLayout.swift */; };
 		9F735F5C20ECFAAF00F16D30 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F735F2820ECFAAE00F16D30 /* SF-Pro-Display-Thin.otf */; };
 		9F735F5D20ECFAAF00F16D30 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F735F2920ECFAAE00F16D30 /* SF-Pro-Display-SemiboldItalic.otf */; };
 		9F735F5E20ECFAAF00F16D30 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F735F2A20ECFAAE00F16D30 /* SF-Pro-Text-Heavy.otf */; };
@@ -103,6 +106,9 @@
 		9F3417B220EBE35100DEDA3B /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		9F3417B420EBE35100DEDA3B /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		9F3417B620EBE35100DEDA3B /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9F677C9C21075ED5002DA21F /* MovieByGenreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieByGenreTableViewCell.swift; sourceTree = "<group>"; };
+		9F677C9E21076373002DA21F /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F677CA2210764CF002DA21F /* FilmsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsFlowLayout.swift; sourceTree = "<group>"; };
 		9F735F2820ECFAAE00F16D30 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		9F735F2920ECFAAE00F16D30 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		9F735F2A20ECFAAE00F16D30 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
@@ -270,6 +276,23 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		9F677CA02107637A002DA21F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F677C9C21075ED5002DA21F /* MovieByGenreTableViewCell.swift */,
+				9F677C9E21076373002DA21F /* MovieCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F677CA1210764A3002DA21F /* CollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9F677CA2210764CF002DA21F /* FilmsFlowLayout.swift */,
+			);
+			path = CollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
 		9F735F2520ECFA9800F16D30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +380,7 @@
 			children = (
 				9F735F9320ED033B00F16D30 /* Base */,
 				9F735F9020ED02E100F16D30 /* Movies By Genre */,
+				9F677CA1210764A3002DA21F /* CollectionViewFlowLayout */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				9F735F9120ED02FF00F16D30 /* MoviesByGenreViewController.swift */,
+				9F677CA02107637A002DA21F /* Cells */,
 			);
 			path = "Movies By Genre";
 			sourceTree = "<group>";
@@ -681,9 +706,12 @@
 				9FD5549C20EBFDF0005BD099 /* MovieDetailsViewModel.swift in Sources */,
 				9FD5548320EBF5A9005BD099 /* MoviesRequest.swift in Sources */,
 				9F34179A20EBBAD600DEDA3B /* AppDelegate.swift in Sources */,
+				9F677C9F21076373002DA21F /* MovieCollectionViewCell.swift in Sources */,
 				9F3417BA20EBE35100DEDA3B /* Protocols.swift in Sources */,
+				9F677CA3210764CF002DA21F /* FilmsFlowLayout.swift in Sources */,
 				9FD5548F20EBF5F0005BD099 /* Credits.swift in Sources */,
 				9F735F9520ED034A00F16D30 /* BaseViewController.swift in Sources */,
+				9F677C9D21075ED5002DA21F /* MovieByGenreTableViewCell.swift in Sources */,
 				9F3417B920EBE35100DEDA3B /* Enum.swift in Sources */,
 				9FD5547E20EBF09F005BD099 /* MovieByGenre.swift in Sources */,
 				9F735F9220ED02FF00F16D30 /* MoviesByGenreViewController.swift in Sources */,

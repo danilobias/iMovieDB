@@ -11,7 +11,7 @@ import UIKit
 class MoviesByGenreViewController: BaseViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var  filmsCollectionView: UICollectionView!
+    @IBOutlet weak var  filmsTableView: UITableView!
     
     // MARK: - Lets and Vars
     var genresViewModel: GenreViewModel! {
@@ -73,8 +73,7 @@ class MoviesByGenreViewController: BaseViewController {
     func finishGetMovies() {
         
         if self.genresViewModel.numberOfRows() == self.moviesByGenreViewModel.moviesByGenre.count {
-            print("Finish")
-            self.filmsCollectionView.reloadData()
+            self.filmsTableView.reloadData()
         }
     }
     
@@ -92,16 +91,26 @@ class MoviesByGenreViewController: BaseViewController {
     }
 }
 
-extension MoviesByGenreViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+extension MoviesByGenreViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let genre: Genres = self.genresViewModel.getGenreBy(index: section)
+        return genre.name ?? ""
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.genresViewModel.numberOfRows()
     }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.moviesByGenreViewModel.moviesByGenre[section].movies?.count ?? 0
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: MovieByGenreTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MoviesByGenreTableViewCell") as! MovieByGenreTableViewCell
+        let moviesByGenre: MoviesByGenreResponse = self.moviesByGenreViewModel.getMoviesBy(index: indexPath.row)
+        cell.configCellWith(movies: moviesByGenre)
+        return cell
     }
+    
 }

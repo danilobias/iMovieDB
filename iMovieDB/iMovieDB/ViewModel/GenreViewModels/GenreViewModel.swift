@@ -27,10 +27,17 @@ class GenreViewModel: GenreViewModelProtocol {
     // MARK: - Methods
     required init() {}
     
+    
+    // MARK: - Utils
     func numberOfRows() -> Int{
         return response?.genres?.count ?? 0
     }
     
+    func getGenreBy(index: Int) -> Genres {
+        return response!.genres![index]
+    }
+    
+    // MARK: - Request
     func getElement(completion: @escaping (Error?) -> Void) {
         
         GenresRequest.getAllGenres(withURL: Constants.APIUrls.getAllGenres) { (genreResponse, error) in

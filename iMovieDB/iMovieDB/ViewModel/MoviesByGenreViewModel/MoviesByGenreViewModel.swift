@@ -32,10 +32,17 @@ class MoviesByGenreViewModel: MoviesByGenreViewModelProtocol {
         moviesByGenre = []
     }
     
+    // MARK: - Utils
     func numberOfRows() -> Int{
         return moviesByGenre.count
     }
     
+    func getMoviesBy(index: Int) -> MoviesByGenreResponse {
+        return moviesByGenre[index]
+    }
+
+    
+    // MARK: - Request
     func getElement(completion: @escaping (Error?) -> Void) {
 
         let url: String = String(format: Constants.APIUrls.getMovieByGenre, genreID)
