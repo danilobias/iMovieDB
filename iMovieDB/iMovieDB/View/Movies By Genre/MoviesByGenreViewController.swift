@@ -40,9 +40,10 @@ class MoviesByGenreViewController: BaseViewController {
     
     // MARK: - Requests
     func makeGenresRequest() {
-        
+        self.showLoading()
         self.genresViewModel.getElement(completion: { (error) in
             // TO-DO: Tratar erro
+            self.hideLoading()
         })
         
 //        self.peopleViewModel?.getElement(firstPage: firstPage, completion: { (error) in
@@ -73,7 +74,9 @@ class MoviesByGenreViewController: BaseViewController {
     func finishGetMovies() {
         
         if self.genresViewModel.numberOfRows() == self.moviesByGenreViewModel.moviesByGenre.count {
-            self.filmsTableView.reloadData()
+            self.hideLoading {
+                self.filmsTableView.reloadData()
+            }
         }
     }
     
