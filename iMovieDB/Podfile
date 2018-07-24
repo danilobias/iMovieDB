@@ -7,6 +7,7 @@ target 'iMovieDB' do
 
   # Pods for iMovieDB
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON'
 
 end
