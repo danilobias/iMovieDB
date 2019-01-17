@@ -10,8 +10,13 @@
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 - [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)
 
-### Contact
+## Next Steps
+- [ ] Pagination
+- [ ] Favorites
+- [ ] Unit and Functional Tests
+
+## Contact
 - [LinkedIn](https://www.linkedin.com/in/danilobias/)
 
-### Contribution
+## Contribution
 - Suggestions ,ideas, Pulls and issues are very welcomed
