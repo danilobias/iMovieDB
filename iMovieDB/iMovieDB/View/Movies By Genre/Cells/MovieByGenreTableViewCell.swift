@@ -15,6 +15,7 @@ class MovieByGenreTableViewCell: UITableViewCell {
     
     // MARK: - Lets and Vars
     var moviesByGenre: MoviesByGenreResponse!
+    var delegate: SelectSingleElement!
 
     // MARK: - TableViewCell Methods
     override func awakeFromNib() {
@@ -33,7 +34,8 @@ class MovieByGenreTableViewCell: UITableViewCell {
     }
 
     // MARK: - Layout configs
-    func configCellWith(movies: MoviesByGenreResponse) {
+    func configCellWith(movies: MoviesByGenreResponse, delegate: SelectSingleElement) {
+        self.delegate = delegate
         self.moviesByGenre = movies
         self.filmsCollectionView.reloadData()
     }
@@ -53,5 +55,13 @@ extension MovieByGenreTableViewCell: UICollectionViewDataSource {
         let movie: MovieByGenre = self.getMovieBy(index: indexPath.row)
         cell.loadImage(urlString: movie.posterFullUrl)
         return cell
+    }
+}
+
+extension MovieByGenreTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let movie: MovieByGenre = self.getMovieBy(index: indexPath.row)
+        self.delegate.didSelectElement(element: movie)
     }
 }

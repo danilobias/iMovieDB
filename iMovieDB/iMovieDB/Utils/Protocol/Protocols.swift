@@ -36,3 +36,7 @@ protocol ListProtocol: InitializerProtocol, Countable, RequestElement{
 protocol ListParamURLProtocol: InitializerProtocol, Countable, RequestElementURL{
     
 }
+
+protocol SelectSingleElement {
+    func didSelectElement(element: Any?) -> Void
+}
