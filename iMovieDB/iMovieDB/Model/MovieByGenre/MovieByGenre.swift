@@ -45,6 +45,7 @@ public class MovieByGenre {
     public var adult: Bool? = false
     
     public var posterFullUrl: String = ""
+    public var backdropFullUrl: String = ""
     
     // MARK: SwiftyJSON Initializers
     /// Initiates the instance based on the object.
@@ -76,6 +77,10 @@ public class MovieByGenre {
         
         if let poster = posterPath {
             posterFullUrl = Constants.APIPreffix.imageUrlPreffix + poster
+        }
+        
+        if let backdrop = backdropPath {
+            backdropFullUrl = Constants.APIPreffix.imageUrlPreffix + backdrop
         }
     }
     

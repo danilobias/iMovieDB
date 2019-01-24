@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F04755721FA5F7C003E34DC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04755621FA5F7C003E34DC /* UIImageView.swift */; };
 		9F34179A20EBBAD600DEDA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34179920EBBAD600DEDA3B /* AppDelegate.swift */; };
 		9F34179F20EBBAD600DEDA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F34179D20EBBAD600DEDA3B /* Main.storyboard */; };
 		9F3417A220EBBAD600DEDA3B /* iMovieDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F3417A020EBBAD600DEDA3B /* iMovieDB.xcdatamodeld */; };
@@ -96,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		6A7D2AFC91E174B336BDB5EF /* Pods_iMovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F04755621FA5F7C003E34DC /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9F34179620EBBAD600DEDA3B /* iMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34179920EBBAD600DEDA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F34179E20EBBAD600DEDA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,6 +200,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F04755421FA5F56003E34DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F04755521FA5F6D003E34DC /* UIImageView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F04755521FA5F6D003E34DC /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				9F04755621FA5F7C003E34DC /* UIImageView.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		9F34178D20EBBAD600DEDA3B = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +256,7 @@
 		9F3417AE20EBE35100DEDA3B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9F04755421FA5F56003E34DC /* Extensions */,
 				9F3417AF20EBE35100DEDA3B /* ErrorManager */,
 				9F3417B120EBE35100DEDA3B /* Constants */,
 				9F3417B320EBE35100DEDA3B /* Enum */,
@@ -725,6 +744,7 @@
 				9F677C9F21076373002DA21F /* MovieCollectionViewCell.swift in Sources */,
 				9F3417BA20EBE35100DEDA3B /* Protocols.swift in Sources */,
 				9F677CA3210764CF002DA21F /* FilmsFlowLayout.swift in Sources */,
+				9F04755721FA5F7C003E34DC /* UIImageView.swift in Sources */,
 				9FD5548F20EBF5F0005BD099 /* Credits.swift in Sources */,
 				9F735F9520ED034A00F16D30 /* BaseViewController.swift in Sources */,
 				9F677C9D21075ED5002DA21F /* MovieByGenreTableViewCell.swift in Sources */,
