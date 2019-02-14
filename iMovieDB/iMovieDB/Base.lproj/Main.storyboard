@@ -141,7 +141,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_claquete_big" translatesAutoresizingMaskIntoConstraints="NO" id="bJg-Yf-aVt">
-                                                <rect key="frame" x="8" y="-26" width="120" height="160"/>
+                                                <rect key="frame" x="8" y="-36" width="120" height="160"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="aci-RU-ZdD"/>
                                                     <constraint firstAttribute="width" constant="120" id="rHy-Vr-MeO"/>
@@ -161,7 +161,7 @@
                                             <constraint firstItem="bJg-Yf-aVt" firstAttribute="leading" secondItem="Tz9-7u-Y2K" secondAttribute="leading" constant="8" id="R15-GL-dCy"/>
                                             <constraint firstAttribute="trailing" secondItem="vew-9K-Gfv" secondAttribute="trailing" constant="8" id="Xph-wr-gG2"/>
                                             <constraint firstAttribute="height" constant="667" id="eu1-qc-wo3"/>
-                                            <constraint firstItem="bJg-Yf-aVt" firstAttribute="top" secondItem="Tz9-7u-Y2K" secondAttribute="top" constant="-26" id="vIH-HN-7SM"/>
+                                            <constraint firstItem="bJg-Yf-aVt" firstAttribute="top" secondItem="Tz9-7u-Y2K" secondAttribute="top" constant="-36" id="vIH-HN-7SM"/>
                                         </constraints>
                                     </view>
                                 </subviews>

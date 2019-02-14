@@ -8,7 +8,7 @@
 
 import UIKit
 
-let offset_HeaderStop:CGFloat = 100.0 // At this offset the Header stops its transformations
+let offset_HeaderStop:CGFloat = 80.0 // At this offset the Header stops its transformations
 let offset_B_LabelHeader:CGFloat = 95.0 // At this offset the Black label reaches the Header
 let distance_W_LabelHeader:CGFloat = 30.0 // The distance between the bottom of the Header and the top of the White Label
 
@@ -194,7 +194,7 @@ extension MovieDetailsViewController: UIScrollViewDelegate {
 
             // Avatar -----------
 
-            let avatarScaleFactor = (min(offset_HeaderStop, offset)) / avatarImage.bounds.height / 4.4 // Slow down the animation
+            let avatarScaleFactor = (min(offset_HeaderStop, offset)) / avatarImage.bounds.height / 5.4 // Slow down the animation
             print(avatarScaleFactor)
 
             let avatarSizeVariation = ((avatarImage.bounds.height * (1.0 + avatarScaleFactor)) - avatarImage.bounds.height) / 2.0
